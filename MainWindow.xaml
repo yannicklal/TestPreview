@@ -1,0 +1,16 @@
+﻿<Window x:Class="TestPreview.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestPreview"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <Button Content="Preview" Height="22" Width="80" Command="{Binding PreviewCommand}"/>
+            <Button Margin="10" Content="Window" Height="22" Width="80" Command="{Binding WindowCommand}"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
