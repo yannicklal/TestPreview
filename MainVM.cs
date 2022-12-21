@@ -41,27 +41,27 @@ namespace TestPreview
             }
         }
 
-        private void PreviewCommandAction()
-        {
-            Paginator paginator = new Paginator();
+    private void PreviewCommandAction()
+    {
+        Paginator paginator = new Paginator();
 
-            MemoryStream lMemoryStream = new MemoryStream();
-            Package package = Package.Open(lMemoryStream, FileMode.Create);
-            XpsDocument xpsDocument = new XpsDocument(package);
-            XpsDocumentWriter writer = XpsDocument.CreateXpsDocumentWriter(xpsDocument);
-            writer.Write(paginator);
-            xpsDocument.Close();
-            package.Close();
+        MemoryStream lMemoryStream = new MemoryStream();
+        Package package = Package.Open(lMemoryStream, FileMode.Create);
+        XpsDocument xpsDocument = new XpsDocument(package);
+        XpsDocumentWriter writer = XpsDocument.CreateXpsDocumentWriter(xpsDocument);
+        writer.Write(paginator);
+        xpsDocument.Close();
+        package.Close();
 
-            Preview previewWindow = new Preview(lMemoryStream);
+        Preview previewWindow = new Preview(lMemoryStream);
 
-            previewWindow.ShowDialog();
-        }
+        previewWindow.ShowDialog();
+    }
 
-        private void WindowCommandCommandAction()
-        {
-            XamlWindow xw = new XamlWindow();
-            xw.Show();
-        }
+    private void WindowCommandCommandAction()
+    {
+        XamlWindow xw = new XamlWindow();
+        xw.Show();
+    }
     }
 }

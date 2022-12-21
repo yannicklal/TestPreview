@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     
-    <Grid>
+    
         <StackPanel>
             <TextBlock Text="My Content"/>
             <Image Source="/Images/flower.jpg" Height="100"/>
         </StackPanel>
-    </Grid>
+   
 </UserControl>

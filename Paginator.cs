@@ -19,6 +19,7 @@ namespace TestPreview
             mySize = new Size(pageWidth, pageHeight);
         }
 
+        
         public override DocumentPage GetPage(int pageNumber)
         {
             XamlPage page = new XamlPage();
